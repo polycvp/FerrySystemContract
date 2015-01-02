@@ -13,6 +13,11 @@ package ferry.eto;
 public class InvalidAccountException extends Exception {
     private long id;
 
+    public InvalidAccountException(String message)
+    {
+        super(message);
+    }
+    
     public InvalidAccountException(long id, String message)
     {
         super(message);

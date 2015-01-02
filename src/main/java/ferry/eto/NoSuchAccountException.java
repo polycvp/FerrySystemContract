@@ -13,6 +13,11 @@ package ferry.eto;
 public class NoSuchAccountException extends Exception {
     private long id;
 
+     public NoSuchAccountException(String message)
+    {
+        super(message);
+    }
+    
     public NoSuchAccountException(long id, String message)
     {
         super(message);

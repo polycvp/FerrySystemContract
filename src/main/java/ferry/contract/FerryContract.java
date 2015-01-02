@@ -87,7 +87,7 @@ public interface FerryContract {
      * @throws InvalidAccountException if the information is incomplete or corrupted
      * @post a user account is created
      */
-    public AccountSummary makeAccount(AccountDetail accDetail) throws InvalidAccountException;
+    public boolean makeAccount(AccountDetail accDetail) throws InvalidAccountException;
     
     /**
      * 
@@ -103,7 +103,7 @@ public interface FerryContract {
      * @param accDetail
      * @return 
      */
-    public AccountSummary deleteAccount(AccountDetail accDetail);
+    public AccountSummary deleteAccount(AccountDetail accDetail) throws NoSuchAccountException;
     
     /**
      * 
